@@ -66,6 +66,20 @@
   .btn-ghost{background:transparent;color:var(--accent);padding:8px 0;border-bottom:1.5px solid var(--accent)}
   .btn-ghost:hover{color:var(--accent-dark);border-color:var(--accent-dark)}
 
+  /* Баннер в шапке */
+  .header-banner{
+    width:100%;
+    height:clamp(180px,30vw,340px);
+    overflow:hidden;
+    background:var(--bg-alt);
+  }
+  .header-banner img{
+    width:100%;height:100%;object-fit:cover;object-position:center;
+  }
+  @media (max-width:640px){
+    .header-banner{height:clamp(140px,42vw,200px)}
+  }
+
   /* Header */
   header{
     position:sticky;top:0;z-index:100;
@@ -239,6 +253,10 @@
 </head>
 <body>
 
+<div class="header-banner">
+  <img src="img/header-banner.webp" alt="Оптовка Плитки — склад и шоурум в Белгороде" width="1280" height="750" fetchpriority="high">
+</div>
+
 <header>
   <div class="container nav">
     <a href="#" class="logo">
@@ -286,35 +304,35 @@
     </div>
 
     <div class="photo-grid">
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/15251163/2a00000197d5c4ee1378352e12a3961eb0dc/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/15251163/2a00000197d5c4ee1378352e12a3961eb0dc/XXL_height" alt="Шоурум Оптовки Плитки в Белгороде" loading="lazy">
+      <a class="photo reveal" href="img/catalog/01.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/01.jpg" alt="Шоурум Оптовки Плитки в Белгороде" loading="lazy">
       </a>
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/14910910/2a00000197d5c4ea26a4dbacb0a5b4568134/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/14910910/2a00000197d5c4ea26a4dbacb0a5b4568134/XXL_height" alt="Керамогранит в шоуруме" loading="lazy">
+      <a class="photo reveal" href="img/catalog/02.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/02.jpg" alt="Керамогранит в шоуруме" loading="lazy">
       </a>
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/14919466/2a00000197d5c313eb71314f7d6634ea2e2c/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/14919466/2a00000197d5c313eb71314f7d6634ea2e2c/XXL_height" alt="Керамическая плитка в шоуруме" loading="lazy">
+      <a class="photo reveal" href="img/catalog/03.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/03.jpg" alt="Керамическая плитка в шоуруме" loading="lazy">
       </a>
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/15043309/2a00000197d5c447e7258f26ab98a088d40e/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/15043309/2a00000197d5c447e7258f26ab98a088d40e/XXL_height" alt="Раскладка плитки в шоуруме" loading="lazy">
+      <a class="photo reveal" href="img/catalog/04.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/04.jpg" alt="Раскладка плитки в шоуруме" loading="lazy">
       </a>
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/15311720/2a00000197d5c5066a44596aaebf012577ac/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/15311720/2a00000197d5c5066a44596aaebf012577ac/XXL_height" alt="Коллекции плитки на складе" loading="lazy">
+      <a class="photo reveal" href="img/catalog/05.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/05.jpg" alt="Коллекции плитки на складе" loading="lazy">
       </a>
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/16503558/2a00000197d5c3060a6af7f3e0e70db43708/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/16503558/2a00000197d5c3060a6af7f3e0e70db43708/XXL_height" alt="Образцы керамогранита" loading="lazy">
+      <a class="photo reveal" href="img/catalog/06.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/06.jpg" alt="Образцы керамогранита" loading="lazy">
       </a>
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/16113897/2a00000197d5c2fcedb2bdba31dd1c67e7e3/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/16113897/2a00000197d5c2fcedb2bdba31dd1c67e7e3/XXL_height" alt="Плитка на стендах шоурума" loading="lazy">
+      <a class="photo reveal" href="img/catalog/07.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/07.jpg" alt="Плитка на стендах шоурума" loading="lazy">
       </a>
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/15251677/2a00000197d5c31f5c07dc4ef8baed22575e/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/15251677/2a00000197d5c31f5c07dc4ef8baed22575e/XXL_height" alt="Керамогранит на складе" loading="lazy">
+      <a class="photo reveal" href="img/catalog/08.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/08.jpg" alt="Керамогранит на складе" loading="lazy">
       </a>
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/16487830/2a00000197d5c434b248e19ee7e520707056/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/16487830/2a00000197d5c434b248e19ee7e520707056/XXL_height" alt="Плитка и мозаика в шоуруме" loading="lazy">
+      <a class="photo reveal" href="img/catalog/09.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/09.jpg" alt="Плитка и мозаика в шоуруме" loading="lazy">
       </a>
-      <a class="photo reveal" href="https://avatars.mds.yandex.net/get-altay/16330083/2a00000197d5c5971d7605ff1783f85e15e7/orig" target="_blank" rel="noopener">
-        <img src="https://avatars.mds.yandex.net/get-altay/16330083/2a00000197d5c5971d7605ff1783f85e15e7/XXL_height" alt="Шоурум плитки в Белгороде" loading="lazy">
+      <a class="photo reveal" href="img/catalog/10.jpg" target="_blank" rel="noopener">
+        <img src="img/catalog/10.jpg" alt="Шоурум плитки в Белгороде" loading="lazy">
       </a>
     </div>
   </div>
