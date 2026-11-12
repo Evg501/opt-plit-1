@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>КерамоОпт — Оптовые поставки плитки и керамогранита от производителя</title>
+<meta name="description" content="Оптовые поставки керамической плитки и керамогранита. Более 500 коллекций в наличии на складе 5000 м². Отгрузка от 1 паллеты. Доставка по РФ за 1-3 дня.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --bg-alt:#F5F5F5;
+    --text:#1A1A1A;
+    --text-muted:#6B6B6B;
+    --accent:#B85C38;
+    --accent-dark:#9A4A2C;
+    --accent-soft:#F3E4DC;
+    --border:#E5E5E5;
+    --shadow:0 10px 40px rgba(26,26,26,0.08);
+    --shadow-hover:0 20px 60px rgba(26,26,26,0.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.6;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Unbounded',sans-serif;font-weight:600;line-height:1.15;letter-spacing:-0.02em}
+  h1{font-size:clamp(2rem,5vw,3.75rem);font-weight:700}
+  h2{font-size:clamp(1.75rem,3.5vw,2.75rem);margin-bottom:1rem}
+  h3{font-size:1.25rem;font-weight:600}
+  a{color:inherit;text-decoration:none;transition:color .2s}
+  img{max-width:100%;display:block}
+  .container{max-width:1280px;margin:0 auto;padding:0 24px}
+  section{padding:90px 0}
+  .section-head{text-align:center;max-width:720px;margin:0 auto 60px}
+  .section-head .eyebrow{
+    display:inline-block;
+    font-size:.8rem;
+    font-weight:600;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:16px;
+  }
+  .section-head p{color:var(--text-muted);font-size:1.05rem;margin-top:12px}
+
+  /* Кнопки */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:16px 32px;border-radius:8px;
+    font-family:'Inter',sans-serif;font-weight:600;font-size:.95rem;
+    cursor:pointer;border:none;transition:all .25s;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(184,92,56,.35)}
+  .btn-secondary{background:transparent;color:var(--text);border:1.5px solid var(--text)}
+  .btn-secondary:hover{background:var(--text);color:#fff}
+  .btn-ghost{background:transparent;color:var(--accent);padding:8px 0;border-bottom:1.5px solid var(--accent)}
+  .btn-ghost:hover{color:var(--accent-dark);border-color:var(--accent-dark)}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Unbounded';font-weight:700;font-size:1.2rem}
+  .logo-mark{
+    width:36px;height:36px;border-radius:8px;
+    background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%);
+    display:grid;place-items:center;color:#fff;font-size:.9rem;font-weight:700;
+  }
+  .nav-menu{display:flex;gap:32px;list-style:none}
+  .nav-menu a{font-size:.92rem;font-weight:500;color:var(--text)}
+  .nav-menu a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:20px}
+  .nav-phone{font-weight:600;font-size:.95rem}
+  .nav-phone:hover{color:var(--accent)}
+  .burger{display:none;background:none;border:none;cursor:pointer;width:32px;height:32px;position:relative}
+  .burger span{position:absolute;left:4px;right:4px;height:2px;background:var(--text);transition:.3s}
+  .burger span:nth-child(1){top:10px}
+  .burger span:nth-child(2){top:15px}
+  .burger span:nth-child(3){top:20px}
+
+  /* Hero */
+  .hero{
+    position:relative;
+    padding:100px 0 120px;
+    background:
+      linear-gradient(100deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.85) 55%,rgba(255,255,255,.3) 100%),
+      url('https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=1600&q=80') center/cover;
+    overflow:hidden;
+  }
+  .hero-content{max-width:720px;position:relative;z-index:2}
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--accent-soft);color:var(--accent-dark);
+    padding:8px 16px;border-radius:100px;
+    font-size:.85rem;font-weight:600;margin-bottom:24px;
+  }
+  .hero-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .hero h1{margin-bottom:24px}
+  .hero h1 span{color:var(--accent)}
+  .hero-sub{font-size:1.15rem;color:var(--text-muted);margin-bottom:40px;max-width:580px}
+  .hero-features{
+    display:flex;flex-wrap:wrap;gap:32px;
+    margin-bottom:40px;
+  }
+  .hero-feature{display:flex;align-items:center;gap:12px;font-weight:500;font-size:.95rem}
+  .hero-feature .check{
+    width:28px;height:28px;border-radius:50%;
+    background:var(--accent);color:#fff;
+    display:grid;place-items:center;flex-shrink:0;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px}
+
+  /* Каталог */
+  .catalog{background:var(--bg-alt)}
+  .filters{
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:48px;
+  }
+  .filter-btn{
+    padding:10px 22px;border-radius:100px;
+    background:#fff;border:1.5px solid var(--border);
+    font-family:'Inter';font-size:.9rem;font-weight:500;
+    cursor:pointer;transition:.2s;color:var(--text);
+  }
+  .filter-btn:hover{border-color:var(--text)}
+  .filter-btn.active{background:var(--text);color:#fff;border-color:var(--text)}
+  .catalog-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;
+  }
+  .card{
+    background:#fff;border-radius:16px;overflow:hidden;
+    transition:.3s;cursor:pointer;
+    border:1px solid var(--border);
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover);border-color:transparent}
+  .card-img{
+    position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg-alt);
+  }
+  .card-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .card:hover .card-img img{transform:scale(1.05)}
+  .card-tag{
+    position:absolute;top:14px;left:14px;
+    background:rgba(255,255,255,.95);backdrop-filter:blur(4px);
+    padding:6px 12px;border-radius:100px;
+    font-size:.75rem;font-weight:600;color:var(--text);
+  }
+  .card-body{padding:22px}
+  .card-body h3{margin-bottom:6px;font-size:1.1rem}
+  .card-meta{color:var(--text-muted);font-size:.88rem;margin-bottom:14px}
+  .card-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .card-price{font-family:'Unbounded';font-weight:700;font-size:1.15rem;color:var(--accent)}
+  .card-price small{font-size:.75rem;color:var(--text-muted);font-weight:400;font-family:'Inter'}
+  .card-btn{
+    font-size:.85rem;font-weight:600;color:var(--accent);
+    border-bottom:1.5px solid var(--accent);padding-bottom:2px;
+  }
+
+  /* Преимущества */
+  .benefits-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;
+  }
+  .benefit{
+    padding:36px 28px;background:#fff;border-radius:16px;
+    border:1px solid var(--border);transition:.3s;
+  }
+  .benefit:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--shadow)}
+  .benefit-icon{
+    width:56px;height:56px;border-radius:14px;
+    background:var(--accent-soft);color:var(--accent);
+    display:grid;place-items:center;margin-bottom:20px;
+  }
+  .benefit h3{margin-bottom:10px;font-size:1.1rem}
+  .benefit p{color:var(--text-muted);font-size:.95rem;line-height:1.55}
+
+  /* Условия */
+  .conditions{background:var(--bg-alt)}
+  .conditions-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:48px;
+  }
+  .plan{
+    background:#fff;border-radius:20px;padding:40px 32px;
+    border:1px solid var(--border);transition:.3s;position:relative;
+  }
+  .plan:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+  .plan.featured{
+    background:var(--text);color:#fff;border-color:var(--text);
+  }
+  .plan.featured .plan-label{background:var(--accent);color:#fff}
+  .plan.featured .plan-price{color:#fff}
+  .plan.featured ul li{color:rgba(255,255,255,.85)}
+  .plan-label{
+    display:inline-block;
+    font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:16px;
+  }
+  .plan h3{font-size:1.4rem;margin-bottom:8px}
+  .plan-desc{color:var(--text-muted);font-size:.92rem;margin-bottom:24px;min-height:42px}
+  .plan.featured .plan-desc{color:rgba(255,255,255,.7)}
+  .plan-price{
+    font-family:'Unbounded';font-weight:700;font-size:2rem;margin-bottom:24px;
+    color:var(--text);
+  }
+  .plan-price small{font-size:.85rem;font-weight:400;color:var(--text-muted);font-family:'Inter'}
+  .plan.featured .plan-price small{color:rgba(255,255,255,.6)}
+  .plan ul{list-style:none;margin-bottom:28px}
+  .plan ul li{
+    padding:8px 0;color:var(--text);font-size:.92rem;
+    display:flex;align-items:flex-start;gap:10px;
+  }
+  .plan ul li::before{
+    content:"";width:18px;height:18px;border-radius:50%;
+    background:var(--accent-soft);color:var(--accent);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B85C38' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    background-size:12px;background-position:center;background-repeat:no-repeat;
+    flex-shrink:0;margin-top:2px;
+  }
+  .plan .btn{width:100%}
+  .plan.featured .btn-secondary{color:#fff;border-color:#fff}
+  .plan.featured .btn-secondary:hover{background:#fff;color:var(--text)}
+
+  /* Бренды */
+  .brands-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;
+    background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden;
+  }
+  .brand{
+    background:#fff;padding:32px 20px;
+    display:grid;place-items:center;
+    font-family:'Unbounded';font-weight:600;font-size:.95rem;
+    color:var(--text-muted);transition:.25s;text-align:center;
+    min-height:110px;
+  }
+  .brand:hover{background:var(--accent-soft);color:var(--accent)}
+  .brands-note{text-align:center;margin-top:32px;color:var(--text-muted);font-size:.95rem}
+  .brands-note strong{color:var(--text)}
+
+  /* Как работаем */
+  .steps{background:var(--bg-alt)}
+  .steps-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;
+    position:relative;
+  }
+  .step{
+    background:#fff;border-radius:16px;padding:32px 24px;
+    border:1px solid var(--border);position:relative;
+  }
+  .step-num{
+    font-family:'Unbounded';font-weight:700;font-size:3rem;
+    color:var(--accent);line-height:1;margin-bottom:16px;
+    opacity:.9;
+  }
+  .step h3{font-size:1.1rem;margin-bottom:8px}
+  .step p{color:var(--text-muted);font-size:.92rem}
+
+  /* Контакты */
+  .contacts-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;
+  }
+  .contact-info h3{font-size:1.5rem;margin-bottom:24px}
+  .contact-item{
+    display:flex;gap:16px;padding:18px 0;
+    border-bottom:1px solid var(--border);
+  }
+  .contact-item:last-child{border-bottom:none}
+  .contact-icon{
+    width:44px;height:44px;border-radius:12px;
+    background:var(--accent-soft);color:var(--accent);
+    display:grid;place-items:center;flex-shrink:0;
+  }
+  .contact-label{font-size:.82rem;color:var(--text-muted);margin-bottom:2px}
+  .contact-value{font-weight:600;font-size:1rem}
+  .contact-value a:hover{color:var(--accent)}
+  .messengers{display:flex;gap:10px;margin-top:8px}
+  .msg-btn{
+    padding:8px 14px;border-radius:100px;
+    background:var(--bg-alt);font-size:.85rem;font-weight:500;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .msg-btn:hover{background:var(--accent);color:#fff}
+
+  .map-wrap{
+    border-radius:20px;overflow:hidden;
+    border:1px solid var(--border);
+    aspect-ratio:1/1;
+  }
+  .map-wrap iframe{width:100%;height:100%;border:0;display:block}
+
+  /* Форма */
+  .form-section{background:var(--text);color:#fff;margin-top:90px;padding:90px 0}
+  .form-section h2{color:#fff}
+  .form-section .section-head p{color:rgba(255,255,255,.7)}
+  .form-section .section-head .eyebrow{color:var(--accent)}
+  .form-wrap{
+    max-width:640px;margin:0 auto;
+    background:#fff;color:var(--text);
+    padding:48px;border-radius:20px;
+  }
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field.full{grid-column:1/-1}
+  .field label{font-size:.85rem;font-weight:500;color:var(--text-muted)}
+  .field input,.field select,.field textarea{
+    padding:14px 16px;border:1.5px solid var(--border);
+    border-radius:10px;font-family:'Inter';font-size:.95rem;
+    background:#fff;color:var(--text);transition:.2s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--accent);
+  }
+  .field textarea{resize:vertical;min-height:90px}
+  .form-note{font-size:.82rem;color:var(--text-muted);margin-top:14px;text-align:center}
+  .form-note a{color:var(--accent);border-bottom:1px solid var(--accent)}
+  .honeypot{position:absolute;left:-9999px}
+  .form-success{
+    display:none;text-align:center;padding:40px 20px;
+  }
+  .form-success.show{display:block}
+  .form-success .check-big{
+    width:72px;height:72px;border-radius:50%;
+    background:var(--accent-soft);color:var(--accent);
+    display:grid;place-items:center;margin:0 auto 20px;
+  }
+
+  /* Footer */
+  footer{background:#0E0E0E;color:rgba(255,255,255,.7);padding:60px 0 30px;font-size:.9rem}
+  .footer-grid{
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;
+  }
+  footer h4{color:#fff;font-size:1rem;margin-bottom:18px;font-family:'Inter';font-weight:600}
+  footer ul{list-style:none}
+  footer ul li{margin-bottom:10px}
+  footer a:hover{color:var(--accent)}
+  .footer-logo{color:#fff;font-family:'Unbounded';font-weight:700;font-size:1.3rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .footer-about{line-height:1.6;max-width:360px}
+  .footer-bottom{
+    padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;
+    font-size:.82rem;color:rgba(255,255,255,.5);
+  }
+  .socials{display:flex;gap:10px}
+  .socials a{
+    width:38px;height:38px;border-radius:10px;
+    background:rgba(255,255,255,.08);
+    display:grid;place-items:center;transition:.2s;
+  }
+  .socials a:hover{background:var(--accent);color:#fff}
+
+  /* Плавающая кнопка на мобильном */
+  .float-call{
+    display:none;
+    position:fixed;bottom:20px;right:20px;z-index:90;
+    background:var(--accent);color:#fff;
+    padding:14px 22px;border-radius:100px;
+    font-weight:600;font-size:.95rem;
+    box-shadow:0 10px 30px rgba(184,92,56,.45);
+    align-items:center;gap:8px;
+  }
+  .float-call:hover{background:var(--accent-dark)}
+
+  /* Анимации появления */
+  .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.visible{opacity:1;transform:none}
+
+  /* Адаптив */
+  @media (max-width:960px){
+    section{padding:70px 0}
+    .nav-menu,.nav-cta .btn{display:none}
+    .burger{display:block}
+    .nav-menu.open{
+      display:flex;flex-direction:column;
+      position:absolute;top:100%;left:0;right:0;
+      background:#fff;padding:24px;gap:18px;
+      border-bottom:1px solid var(--border);
+    }
+    .contacts-grid{grid-template-columns:1fr}
+    .map-wrap{aspect-ratio:4/3}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+    .float-call{display:inline-flex}
+    body{padding-bottom:80px}
+  }
+  @media (max-width:640px){
+    .hero{padding:60px 0 80px}
+    .hero-features{gap:16px}
+    .hero-feature{font-size:.88rem}
+    .form-wrap{padding:28px 20px}
+    .form-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr}
+    .plan{padding:32px 24px}
+    .form-section{margin-top:60px;padding:60px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <span class="logo-mark">КО</span>
+      КерамоОпт
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#catalog">Каталог</a></li>
+      <li><a href="#benefits">Преимущества</a></li>
+      <li><a href="#conditions">Условия</a></li>
+      <li><a href="#steps">Как работаем</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+74951234567" class="nav-phone">+7 (495) 123-45-67</a>
+      <a href="#form" class="btn btn-primary">Прайс-лист</a>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">Склад работает · Отгрузка сегодня</div>
+      <h1>Оптовые поставки <span>плитки и керамогранита</span> от производителя</h1>
+      <p class="hero-sub">Более 500 коллекций в наличии на собственном складе. Отгрузка от 1 паллеты. Доставка по РФ за 1–3 дня. Работаем с юрлицами по безналу с НДС.</p>
+      <div class="hero-features">
+        <div class="hero-feature">
+          <span class="check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Склад 5 000 м²
+        </div>
+        <div class="hero-feature">
+          <span class="check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Цены от 350 ₽/м²
+        </div>
+        <div class="hero-feature">
+          <span class="check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Работаем с юрлицами
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#form" class="btn btn-primary">
+          Скачать прайс-лист
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <a href="#form" class="btn btn-secondary">Получить образец</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КАТАЛОГ -->
+<section class="catalog" id="catalog">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Каталог</span>
+      <h2>Коллекции в наличии на складе</h2>
+      <p>Актуальные остатки обновляются ежедневно. Отправляем образцы и полные спецификации по запросу.</p>
+    </div>
+
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">Все коллекции</button>
+      <button class="filter-btn" data-filter="keramogranit">Керамогранит</button>
+      <button class="filter-btn" data-filter="kafel">Кафельная</button>
+      <button class="filter-btn" data-filter="mozaika">Мозаика</button>
+      <button class="filter-btn" data-filter="decor">Декор</button>
+    </div>
+
+    <div class="catalog-grid">
+      <article class="card reveal" data-type="keramogranit">
+        <div class="card-img">
+          <span class="card-tag">Керамогранит</span>
+          <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800&q=80" alt="Коллекция Milano">
+        </div>
+        <div class="card-body">
+          <h3>Milano Stone</h3>
+          <div class="card-meta">600×600 мм · матовая · ректификат</div>
+          <div class="card-bottom">
+            <div class="card-price">от 680 ₽ <small>/м²</small></div>
+            <a href="#form" class="card-btn">Прайс →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-type="keramogranit">
+        <div class="card-img">
+          <span class="card-tag">Керамогранит</span>
+          <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&q=80" alt="Коллекция Nord">
+        </div>
+        <div class="card-body">
+          <h3>Nord Wood</h3>
+          <div class="card-meta">1200×200 мм · под дерево · лаппатированная</div>
+          <div class="card-bottom">
+            <div class="card-price">от 890 ₽ <small>/м²</small></div>
+            <a href="#form" class="card-btn">Прайс →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-type="kafel">
+        <div class="card-img">
+          <span class="card-tag">Кафельная</span>
+          <img src="https://images.unsplash.com/photo-1584462765790-95a9f3264870?w=800&q=80" alt="Коллекция Classic">
+        </div>
+        <div class="card-body">
+          <h3>Classic White</h3>
+          <div class="card-meta">250×333 мм · глянцевая · настенная</div>
+          <div class="card-bottom">
+            <div class="card-price">от 420 ₽ <small>/м²</small></div>
+            <a href="#form" class="card-btn">Прайс →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-type="mozaika">
+        <div class="card-img">
+          <span class="card-tag">Мозаика</span>
+          <img src="https://images.unsplash.com/photo-1615529162924-f8605388461d?w=800&q=80" alt="Коллекция Mosaico">
+        </div>
+        <div class="card-body">
+          <h3>Mosaico Gold</h3>
+          <div class="card-meta">300×300 мм · стеклянная · на сетке</div>
+          <div class="card-bottom">
+            <div class="card-price">от 1 450 ₽ <small>/м²</small></div>
+            <a href="#form" class="card-btn">Прайс →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-type="keramogranit">
+        <div class="card-img">
+          <span class="card-tag">Керамогранит</span>
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Коллекция Beton">
+        </div>
+        <div class="card-body">
+          <h3>Beton Loft</h3>
+          <div class="card-meta">600×1200 мм · под бетон · матовая</div>
+          <div class="card-bottom">
+            <div class="card-price">от 950 ₽ <small>/м²</small></div>
+            <a href="#form" class="card-btn">Прайс →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-type="decor">
+        <div class="card-img">
+          <span class="card-tag">Декор</span>
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" alt="Коллекция Decor">
+        </div>
+        <div class="card-body">
+          <h3>Pattern Decor</h3>
+          <div class="card-meta">200×200 мм · цементная · для пола</div>
+          <div class="card-bottom">
+            <div class="card-price">от 780 ₽ <small>/м²</small></div>
+            <a href="#form" class="card-btn">Прайс →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-type="kafel">
+        <div class="card-img">
+          <span class="card-tag">Кафельная</span>
+          <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=800&q=80" alt="Коллекция Metro">
+        </div>
+        <div class="card-body">
+          <h3>Metro Bevel</h3>
+          <div class="card-meta">75×150 мм · фаска · глянцевая</div>
+          <div class="card-bottom">
+            <div class="card-price">от 380 ₽ <small>/м²</small></div>
+            <a href="#form" class="card-btn">Прайс →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card reveal" data-type="keramogranit">
+        <div class="card-img">
+          <span class="card-tag">Керамогранит</span>
+          <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80" alt="Коллекция Marble">
+        </div>
+        <div class="card-body">
+          <h3>Marble Calacatta</h3>
+          <div class="card-meta">800×1600 мм · под мрамор · полированная</div>
+          <div class="card-bottom">
+            <div class="card-price">от 1 890 ₽ <small>/м²</small></div>
+            <a href="#form" class="card-btn">Прайс →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <a href="#form" class="btn btn-secondary">Запросить полный каталог</a>
+    </div>
+  </div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section id="benefits">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Почему мы</span>
+      <h2>Почему с нами работают прорабы, дизайнеры и магазины</h2>
+      <p>Прозрачные условия, склад в Москве, документы в день отгрузки. Никаких предоплат 100% — работаем по договору.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <div class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Склад 5 000 м²</h3>
+        <p>Отгрузка в день заказа. 500+ коллекций в наличии — не нужно ждать 3–4 недели с завода.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Цены ниже рынка на 15–20%</h3>
+        <p>Прямые контракты с 12 заводами. Без посредников и наценок дистрибьюторов второго уровня.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <h3>Полный пакет документов</h3>
+        <p>УПД, сертификаты соответствия, паспорта качества. Закрывающие документы — в день оплаты.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>Персональный менеджер</h3>
+        <p>Один человек ведёт ваш проект от заявки до сдачи. Не нужно каждый раз объяснять задачу заново.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </div>
+        <h3>Отсрочка платежа</h3>
+        <p>Для постоянных партнёров — отсрочка до 30 дней. Работаем по договору поставки с НДС.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Доставка по всей РФ</h3>
+        <p>Собственный транспорт по Москве и МО — в день заказа. По России — через проверенные ТК за 1–3 дня.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <a href="#form" class="btn btn-primary">Получить прайс и условия</a>
+    </div>
+  </div>
+</section>
+
+<!-- УСЛОВИЯ -->
+<section class="conditions" id="conditions">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Условия</span>
+      <h2>Три формата сотрудничества</h2>
+      <p>Выберите подходящий объём. Чем больше партия — тем выгоднее цена. Для дизайнеров — отдельная программа с бонусами.</p>
+    </div>
+
+    <div class="conditions-grid">
+      <div class="plan reveal">
+        <span class="plan-label">Опт</span>
+        <h3>От 1 паллеты</h3>
+        <p class="plan-desc">Для прорабов и небольших объектов. От 40 м² в одном заказе.</p>
+        <div class="plan-price">от 350 ₽ <small>/м²</small></div>
+        <ul>
+          <li>Отгрузка в день оплаты</li>
+          <li>Доставка по Москве и МО</li>
+          <li>Полный пакет документов</li>
+          <li>Персональный менеджер</li>
+        </ul>
+        <a href="#form" class="btn btn-secondary">Оставить заявку</a>
+      </div>
+
+      <div class="plan featured reveal">
+        <span class="plan-label">Крупный опт</span>
+        <h3>От 100 м²</h3>
+        <p class="plan-desc">Для застройщиков и строительных компаний. Дополнительные скидки от объёма.</p>
+        <div class="plan-price">от 310 ₽ <small>/м²</small></div>
+        <ul>
+          <li>Скидка до 25% от розницы</li>
+          <li>Отсрочка платежа до 30 дней</li>
+          <li>Резерв коллекции на складе</li>
+          <li>Доставка по РФ за наш счёт*</li>
+          <li>Приоритетная отгрузка</li>
+        </ul>
+        <a href="#form" class="btn btn-secondary">Обсудить условия</a>
+      </div>
+
+      <div class="plan reveal">
+        <span class="plan-label">Для дизайнеров</span>
+        <h3>Партнёрская программа</h3>
+        <p class="plan-desc">Спеццены для дизайнеров интерьеров и архитекторов. Бонусы за рекомендации.</p>
+        <div class="plan-price">−20% <small>от розницы</small></div>
+        <ul>
+          <li>Бесплатные образцы до 10 шт.</li>
+          <li>3D-визуализация в подарок</li>
+          <li>Бонус 5% за приведённых клиентов</li>
+          <li>Личный кабинет с историей</li>
+        </ul>
+        <a href="#form" class="btn btn-secondary">Стать партнёром</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- БРЕНДЫ -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Партнёры</span>
+      <h2>Работаем напрямую с заводами</h2>
+      <p>Официальный дистрибьютор ведущих российских и европейских производителей керамической плитки.</p>
+    </div>
+
+    <div class="brands-grid reveal">
+      <div class="brand">Kerama Marazzi</div>
+      <div class="brand">Lasselsberger</div>
+      <div class="brand">Cersanit</div>
+      <div class="brand">Gracia Ceramica</div>
+      <div class="brand">Italon</div>
+      <div class="brand">Azori</div>
+      <div class="brand">Уралкерамика</div>
+      <div class="brand">Vitra</div>
+      <div class="brand">Estima</div>
+      <div class="brand">Golden Tile</div>
+      <div class="brand">Atlas Concorde</div>
+      <div class="brand">Marazzi</div>
+    </div>
+    <p class="brands-note reveal">Полный список заводов-партнёров — <a href="#form" style="color:var(--accent);border-bottom:1px solid var(--accent)">в прайс-листе</a></p>
+  </div>
+</section>
+
+<!-- КАК РАБОТАЕМ -->
+<section class="steps" id="steps">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Процесс</span>
+      <h2>Как мы работаем</h2>
+      <p>От заявки до доставки на объект — 4 простых шага. Без скрытых условий и долгих согласований.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Заявка</h3>
+        <p>Оставляете заявку на сайте или звоните. Менеджер связывается с вами в течение 15 минут в рабочее время.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h3>Подбор коллекции</h3>
+        <p>Отправляем каталог, образцы и спецификацию под ваш объект. Помогаем с расчётом количества + запас 10%.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h3>Договор и оплата</h3>
+        <p>Работаем по безналу с НДС. Выставляем счёт в день согласования. Для постоянных клиентов — отсрочка платежа.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <h3>Доставка</h3>
+        <p>Привозим на объект в согласованную дату. Разгрузка манипулятором, подъём на этаж — по договорённости.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <a href="#form" class="btn btn-primary">Запросить образец</a>
+    </div>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contacts">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Контакты</span>
+      <h2>Склад и офис в Москве</h2>
+      <p>Приезжайте посмотреть коллекции вживую — у нас шоурум с реальными раскладками плитки.</p>
+    </div>
+
+    <div class="contacts-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Адрес склада и шоурума</div>
+            <div class="contact-value">г. Москва, ул. Промышленная, 12, стр. 4</div>
+            <div style="font-size:.88rem;color:var(--text-muted);margin-top:4px">5 минут от метро Авиамоторная, парковка для фур</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Часы работы</div>
+            <div class="contact-value">Склад: Пн–Пт 8:00–20:00, Сб 9:00–18:00</div>
+            <div class="contact-value" style="margin-top:2px">Офис: Пн–Пт 9:00–19:00</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Отдел оптовых продаж</div>
+            <div class="contact-value"><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+            <div class="contact-value" style="margin-top:2px"><a href="tel:+79251234567">+7 (925) 123-45-67</a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email для заявок и документов</div>
+            <div class="contact-value"><a href="mailto:opt@keramoopt.ru">opt@keramoopt.ru</a></div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Быстрая связь</div>
+            <div class="messengers">
+              <a href="#" class="msg-btn">WhatsApp</a>
+              <a href="#" class="msg-btn">Telegram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-wrap reveal">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=37.69%2C55.74%2C37.73%2C55.76&layer=mapnik&marker=55.75%2C37.71" loading="lazy" title="Карта"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ФОРМА -->
+<section class="form-section" id="form">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Заявка</span>
+      <h2>Запросить прайс-лист и образцы</h2>
+      <p>Менеджер свяжется с вами в течение 15 минут в рабочее время. Отправим актуальный прайс, каталог и условия сотрудничества.</p>
+    </div>
+
+    <div class="form-wrap reveal">
+      <form id="leadForm" novalidate>
+        <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Ваше имя *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Телефон *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.ru">
+          </div>
+          <div class="field">
+            <label for="client">Тип клиента *</label>
+            <select id="client" name="client" required>
+              <option value="">Выберите...</option>
+              <option value="prorab">Прораб / строительная компания</option>
+              <option value="designer">Дизайнер / архитектор</option>
+              <option value="shop">Розничный магазин плитки</option>
+              <option value="developer">Застройщик / УК</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="message">Комментарий (объём, коллекции, сроки)</label>
+            <textarea id="message" name="message" placeholder="Например: нужно 120 м² керамогранита 60×60 для ЖК, отгрузка до 15 числа"></textarea>
+          </div>
+        </div>
+        <div style="margin-top:24px;text-align:center">
+          <button type="submit" class="btn btn-primary" style="min-width:240px">
+            Отправить заявку
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных</a></p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="check-big">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 style="margin-bottom:8px">Заявка принята</h3>
+        <p style="color:var(--text-muted)">Менеджер свяжется с вами в течение 15 минут в рабочее время. Прайс-лист отправим на email.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span class="logo-mark">КО</span>
+          КерамоОпт
+        </div>
+        <p class="footer-about">Оптовые поставки керамической плитки и керамогранита от производителя. Работаем с 2012 года. Собственный склад 5 000 м² в Москве.</p>
+      </div>
+      <div>
+        <h4>Каталог</h4>
+        <ul>
+          <li><a href="#catalog">Керамогранит</a></li>
+          <li><a href="#catalog">Кафельная плитка</a></li>
+          <li><a href="#catalog">Мозаика</a></li>
+          <li><a href="#catalog">Декор</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="#benefits">Преимущества</a></li>
+          <li><a href="#conditions">Условия</a></li>
+          <li><a href="#steps">Как работаем</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+          <li><a href="mailto:opt@keramoopt.ru">opt@keramoopt.ru</a></li>
+          <li>Москва, Промышленная, 12</li>
+        </ul>
+        <div class="socials" style="margin-top:16px">
+          <a href="#" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="#" aria-label="VK"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.622 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.253-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2012–2026 ООО «КерамоОпт» · ИНН 7701234567 · ОГРН 1157700000000</div>
+      <div><a href="#">Политика конфиденциальности</a> · <a href="#">Публичная оферта</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Плавающая кнопка звонка на мобильном -->
+<a href="tel:+74951234567" class="float-call" aria-label="Позвонить">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Позвонить
+</a>
+
+<script>
+  // Бургер-меню
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('navMenu');
+  burger.addEventListener('click', () => navMenu.classList.toggle('open'));
+  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
+
+  // Фильтры каталога
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(card => {
+        const show = f === 'all' || card.dataset.type === f;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+
+  // Анимация появления
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Маска телефона
+  const phoneInput = document.getElementById('phone');
+  phoneInput.addEventListener('input', (e) => {
+    let v = e.target.value.replace(/\D/g, '');
+    if (v.startsWith('8')) v = '7' + v.slice(1);
+    if (!v.startsWith('7')) v = '7' + v;
+    v = v.slice(0, 11);
+    let out = '+7';
+    if (v.length > 1) out += ' (' + v.slice(1, 4);
+    if (v.length >= 5) out += ') ' + v.slice(4, 7);
+    if (v.length >= 8) out += '-' + v.slice(7, 9);
+    if (v.length >= 10) out += '-' + v.slice(9, 11);
+    e.target.value = out;
+  });
+
+  // Обработка формы (защита: honeypot + валидация)
+  const form = document.getElementById('leadForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Honeypot
+    if (form.website.value.trim() !== '') return;
+    // Валидация
+    const name = form.name.value.trim();
+    const phone = form.phone.value.replace(/\D/g, '');
+    const client = form.client.value;
+    if (!name || phone.length < 11 || !client) {
+      alert('Заполните обязательные поля: имя, телефон и тип клиента');
+      return;
+    }
+    // Имитация отправки
+    form.style.display = 'none';
+    success.classList.add('show');
+    // Здесь можно отправить данные на сервер:
+    // fetch('/api/lead', {method:'POST', body:new FormData(form)})
+  });
+</script>
+
+</body>
+</html>
